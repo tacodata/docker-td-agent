@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Takayuki Shimizukawa shimizukawa@gmail.com
+MAINTAINER Greg Fausak greg@tacodata.com
 
 # environment
 ENV DEBIAN_FRONTEND noninteractive
@@ -20,8 +20,8 @@ RUN apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 RUN /opt/td-agent/embedded/bin/fluent-gem install --no-ri --no-rdoc \
     fluent-plugin-elasticsearch \
     fluent-plugin-record-modifier \
+    fluent-plugin-record-reformer \
     fluent-plugin-exclude-filter
-
 
 # add conf
 ADD ./etc/fluentd /etc/fluentd

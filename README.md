@@ -5,6 +5,7 @@ Docker image with:
 - [td-agent](http://www.fluentd.org/)
 - fluent-plugin-elasticsearch
 - fluent-plugin-record-modifier
+- fluent-plugin-record-reformer
 - fluent-plugin-exclude-filter
 
 which do nothing by default.
